@@ -9,5 +9,5 @@ outputs:
   has-permission:
     description: Result of permission check
 runs:
-  using: node12
+  using: node16
   main: bin/index.js

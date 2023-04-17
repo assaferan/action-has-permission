@@ -10,7 +10,7 @@ jobs:
       # Check write permission
       - name: Check for write permission
         id: check-write
-        uses: scherermichael/action-has-permission@master
+        uses: assaferan/action-has-permission@master
         with:
           required-permission: "write"
         env:
@@ -25,7 +25,7 @@ jobs:
       # Check superuser permission
       - name: Check for test-only-superuser permission
         id: check-superuser
-        uses: scherermichael/action-has-permission@master
+        uses: assaferan/action-has-permission@master
         with:
           required-permission: "test-only-superuser"
         env:
@@ -41,7 +41,7 @@ jobs:
       # Check default permission
       - name: Check for default permission
         id: check-default
-        uses: scherermichael/action-has-permission@master
+        uses: assaferan/action-has-permission@master
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Run only if user has sufficent permissions
